@@ -28,6 +28,15 @@ const Layout = ({ children }) => {
             <Link href="/projects">
             <a>Projects</a>
             </Link>
+            <Link href="/blog">
+            <a>Blog</a>
+            </Link>
+            <Link href="/resume">
+            <a>Resume</a>
+            </Link>
+            <Link href="/contact">
+            <a>Contact me</a>
+            </Link>
         </div>
         <div className={styles.main}>{children}</div>
     </React.Fragment>
