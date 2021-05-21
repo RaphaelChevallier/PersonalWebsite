@@ -1,10 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
   .header {
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid;
+    background-image: linear-gradient(60deg,#0E1319, #2C3541 );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bebas Neue';
+  }
+
+  .linkGroup {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
+  }
+
+  .link{
+    margin: 0 5px;
+    color: #D9D9DA;
   }
 
   .main {

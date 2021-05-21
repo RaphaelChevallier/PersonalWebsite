@@ -22,21 +22,23 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/interconnectivity.ico" />
       </Head>
         <div className={styles.header}>
-            <Link href="/">
-            <a>Home</a>
-            </Link>
-            <Link href="/projects">
-            <a>Projects</a>
-            </Link>
-            <Link href="/blog">
-            <a>Blog</a>
-            </Link>
-            <Link href="/resume">
-            <a>Resume</a>
-            </Link>
-            <Link href="/contact">
-            <a>Contact me</a>
-            </Link>
+            <div className={styles.linkGroup}>
+              <Link href="/">
+              <a className={styles.link}>Home</a>
+              </Link>
+              <Link href="/projects">
+              <a className={styles.link}>Projects</a>
+              </Link>
+              <Link href="/blog">
+              <a className={styles.link}>Blog</a>
+              </Link>
+              <Link href="/resume">
+              <a className={styles.link}>Resume</a>
+              </Link>
+              <Link href="/contact">
+              <a className={styles.link}>Contact me</a>
+              </Link>
+            </div>
         </div>
         <div className={styles.main}>{children}</div>
     </React.Fragment>
