@@ -2,8 +2,10 @@ import React from "react"
 import Link from "next/link"
 import styles from "../styles/Layouts.module.css"
 import Head from 'next/head'
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   return (
     <React.Fragment>
     <Head>
@@ -21,26 +23,35 @@ const Layout = ({ children }) => {
         <meta name="description" content="Raphael Chevallier -Software Engineer- Personal Portfolio site" />
         <link rel="icon" href="/interconnectivity.ico" />
       </Head>
+      <div className={styles.main}>
         <div className={styles.header}>
+          <div className={styles.profileIcons}>
+            <p>{'>'}~ cd /Home/</p>
+          </div>
+          <div className={styles.searchBar}>
+            <p>{'>'}~ cd /Home/</p>
+            <input className={styles.navSearch} placeholder="&#9646;" id="navSearch" type="text" />
+          </div>
             <div className={styles.linkGroup}>
               <Link href="/">
-              <a className={styles.link}>Home</a>
+              <a className={router.pathname == "/" ? styles.activeLink : styles.link}>Home</a>
               </Link>
               <Link href="/projects">
-              <a className={styles.link}>Projects</a>
+              <a className={router.pathname == "/projects" ? styles.activeLink : styles.link}>Projects</a>
               </Link>
               <Link href="/blog">
-              <a className={styles.link}>Blog</a>
+              <a className={router.pathname == "/blog" ? styles.activeLink : styles.link}>Blog</a>
               </Link>
               <Link href="/resume">
-              <a className={styles.link}>Resume</a>
+              <a className={router.pathname == "/resume" ? styles.activeLink : styles.link}>Resume</a>
               </Link>
               <Link href="/contact">
-              <a className={styles.link}>Contact me</a>
+              <a className={router.pathname == "/contact" ? styles.activeLink : styles.link}>Contact me</a>
               </Link>
             </div>
-        </div>
-        <div className={styles.main}>{children}</div>
+          </div>
+        <div className={styles.pageBody}>{children}</div>
+      </div>
     </React.Fragment>
   )
 }
