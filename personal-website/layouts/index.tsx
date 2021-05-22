@@ -3,6 +3,7 @@ import Link from "next/link"
 import styles from "../styles/Layouts.module.css"
 import Head from 'next/head'
 import { useRouter } from "next/router";
+import Image from 'next/image';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -26,7 +27,6 @@ const Layout = ({ children }) => {
       <div className={styles.main}>
         <div className={styles.header}>
           <div className={styles.profileIcons}>
-            <p>{'>'}~ cd /Home/</p>
           </div>
           <div className={styles.searchBar}>
             <p>{'>'}~ cd /Home/</p>
@@ -39,14 +39,14 @@ const Layout = ({ children }) => {
               <Link href="/projects">
               <a className={router.pathname == "/projects" ? styles.activeLink : styles.link}>Projects</a>
               </Link>
-              <Link href="/blog">
+              {/* <Link href="/blog">
               <a className={router.pathname == "/blog" ? styles.activeLink : styles.link}>Blog</a>
-              </Link>
+              </Link> */}
               <Link href="/resume">
-              <a className={router.pathname == "/resume" ? styles.activeLink : styles.link}>Resume</a>
+              <a className={router.pathname == "/resume" ? styles.activeLink : styles.link}>About me</a>
               </Link>
               <Link href="/contact">
-              <a className={router.pathname == "/contact" ? styles.activeLink : styles.link}>Contact me</a>
+              <a className={router.pathname == "/contact" ? styles.activeLink : styles.link}>Contact</a>
               </Link>
             </div>
           </div>

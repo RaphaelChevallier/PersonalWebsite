@@ -3,7 +3,7 @@
   .header {
     padding: 1em;
     height: 80px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #C0C0C0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,13 +32,37 @@
     color: #C0C0C0;
     font-family: monospace;
     font-size: 1em;
-    width: 120px;
+    width: 160px;
     background: transparent;
     border: none;
+    animation: blinker 1.3s linear infinite;
     outline-width: 0;
   }
 
+  .navSearch:focus{
+    animation-play-state: paused;
+    caret-color: #E45407;
+  }
+
+  .navSearch:focus::placeholder {
+    color: transparent;
+  }
+
+  .navSearch:focus::-ms-input-placeholder{
+    color: transparent;
+  }
+
   .navSearch::placeholder{
+    color: #E45407;
+    font-weight: bolder;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .navSearch::-ms-input-placeholder{
     color: #E45407;
     font-weight: bolder;
   }
@@ -48,6 +72,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    font-size: 1.5em;
   }
 
   .link{
