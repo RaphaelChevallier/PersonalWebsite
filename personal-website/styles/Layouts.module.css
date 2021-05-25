@@ -2,7 +2,7 @@
 
   .header {
     padding: 1em;
-    height: 80px;
+    height: 8%;
     border-bottom: 1px solid #C0C0C0;
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,7 @@
   .svg {
     margin-left: 20px;
     fill: #D9D9DA;
+    height: 1.3em;
   }
 
   .svg:hover{
