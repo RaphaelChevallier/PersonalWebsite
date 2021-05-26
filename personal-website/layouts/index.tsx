@@ -6,6 +6,26 @@ import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
   const router = useRouter();
+  const navSearchPage = async event => {
+    event.preventDefault()
+    
+    var navSearch = event.target.navSearch.value.trim();
+    event.target.reset();
+
+    if(navSearch == 'contact' || navSearch == 'contact me' || navSearch == 'email'){
+      router.push('/contact');
+    } else if(navSearch== 'home' || navSearch == '~' || navSearch == '..'){
+        router.push('/');
+    } else if(navSearch== 'projects' || navSearch == 'project' || navSearch == 'work'){
+        router.push('/projects');
+    } else if(navSearch == 'resume' || navSearch == 'cv'){
+        router.push('/resume');
+    } else if(navSearch == 'github'){
+        router.push("https://github.com/RaphaelChevallier");
+    } else if(navSearch == 'linkedin' || navSearch == 'linked in'){
+        router.push("https://www.linkedin.com/in/raphael-c/");
+    }
+  }
   return (
     <React.Fragment>
     <Head>
@@ -56,7 +76,10 @@ const Layout = ({ children }) => {
           </div>
           <div className={styles.searchBar}>
             <p>{'>'}~ cd /Home/</p>
-            <input className={styles.navSearch} placeholder="&#9646;" id="navSearch" type="text" />
+              <form onSubmit={navSearchPage}>
+                <input className={styles.navSearch} placeholder="&#9646;" name="navSearch" type="text" />
+                <input type="submit" className={styles.navSearchSubmit}  />
+              </form>
           </div>
             <div className={styles.linkGroup}>
               <Link href="/">
@@ -69,7 +92,7 @@ const Layout = ({ children }) => {
                 <a className={router.pathname == "/blog" ? styles.activeLink : styles.link}>Blog</a>
               </Link> */}
               <Link href="/resume">
-                <a className={router.pathname == "/resume" ? styles.activeLink : styles.link}>About me</a>
+                <a className={router.pathname == "/resume" ? styles.activeLink : styles.link}>Resume</a>
               </Link>
               <Link href="/contact">
                 <a className={router.pathname == "/contact" ? styles.activeLink : styles.link}>Contact</a>
