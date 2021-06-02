@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../layouts"
+import Layout from "../layouts/main_layout"
 
 const Resume = () => {
   return <Layout>Resume Content</Layout>

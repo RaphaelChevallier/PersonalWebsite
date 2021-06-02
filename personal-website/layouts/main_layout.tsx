@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
 
     if(navSearch == 'contact' || navSearch == 'contact me' || navSearch == 'email'){
       router.push('/contact');
-    } else if(navSearch== 'home' || navSearch == '~' || navSearch == '..'){
+    } else if(navSearch== 'home' || navSearch == '~' || navSearch == '..' || navSearch == ''){
         router.push('/');
     } else if(navSearch== 'projects' || navSearch == 'project' || navSearch == 'work'){
         router.push('/projects');
