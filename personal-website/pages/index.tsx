@@ -4,7 +4,7 @@ import Layout from "../layouts/main_layout"
 import styles from "../styles/index.module.css"
 
 
-const Home = props => {
+const Home = () => {
   return (
     <Layout>
       <h1 className={styles.titleBar}>Welcome! My name is Raphael Chevallier.</h1>
