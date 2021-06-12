@@ -112,9 +112,6 @@
     height: 100%;
     flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: 'Avenir Next Cyr', sans-serif;
     background-image: linear-gradient(180deg, #DADAD9 100%, #FFFFFF 0%);
   }

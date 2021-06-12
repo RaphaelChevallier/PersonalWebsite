@@ -1,3 +1,10 @@
+.paragraphGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
 .titleBar{
     color: #0E1319;
     font-size: 2.5em;
