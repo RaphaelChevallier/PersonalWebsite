@@ -4,7 +4,7 @@ import styles from "../styles/Layouts.module.css"
 import Head from 'next/head'
 import { useRouter } from "next/router";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: {children: any}) => {
   const router = useRouter();
   const navSearchPage = async event => {
     event.preventDefault()
