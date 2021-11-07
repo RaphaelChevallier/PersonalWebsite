@@ -24,6 +24,7 @@ const Contact = () => {
     <Layout>
       <div className={styles.contacts}>
         <form onSubmit={handleEmailContact} className={styles.columns}>
+            <h1 className={styles.titleBar}>Hey there! Feel free to drop me a message.</h1>
             <label className={styles.label} htmlFor="name">Name:</label>
             <input className={styles.contactInfo}
               id="name"
@@ -49,11 +50,6 @@ const Contact = () => {
             />
             <button className={styles.submit} type="submit">Send</button>
           </form>
-        <div className={styles.columns}>
-          <h1 className={styles.titleBar}>Welcome! My name is Raphael Chevallier.</h1>
-          <h2 className={styles.secondTitle}> Software Engineer based in the Bay Area.</h2>
-          <p className={styles.aboutMe}> Innovation and progress is what I am after. Transforming ideas to reality is my goal. I strive to better the world in every way I can. I am constantly learning more and apply what I learn.</p>
-        </div>
       </div>
     </Layout>
   )
