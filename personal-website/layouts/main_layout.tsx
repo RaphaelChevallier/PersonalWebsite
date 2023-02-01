@@ -41,7 +41,7 @@ const Layout = ({ children }: {children: any}) => {
         </style>
         <title>Raphael Chevallier</title>
         <meta name="description" content="Raphael Chevallier -Software Engineer- Personal Portfolio site" />
-        <link rel="icon" href="/interconnectivity.ico" />
+        <link rel="icon" href="/connectionColor.png" />
       </Head>
       <div className={styles.main}>
         <div className={styles.header}>
